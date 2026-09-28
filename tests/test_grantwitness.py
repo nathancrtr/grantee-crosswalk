@@ -1,7 +1,7 @@
 """The fetch sidecar records when a file's bytes were first seen, not when its URL changed."""
 import json
 
-from grantee_resolver import grantwitness
+from grantee_crosswalk import grantwitness
 
 
 class Resp:

@@ -18,7 +18,7 @@ jobs:
       - run: grantee taggs
       - name: commit changes
         run: |
-          git config user.name "grantee-resolver bot"
+          git config user.name "grantee-crosswalk bot"
           git config user.email "bot@users.noreply.github.com"
           git add data/
           git diff --cached --quiet || git commit -m "data: TAGGS snapshot $(date -u +%F)"

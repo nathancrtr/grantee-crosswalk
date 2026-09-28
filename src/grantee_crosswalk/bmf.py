@@ -17,6 +17,8 @@ from pathlib import Path
 
 import requests
 
+from . import USER_AGENT
+
 URL = "https://www.irs.gov/pub/irs-soi/eo_{st}.csv"
 
 
@@ -25,7 +27,7 @@ def fetch_state(st: str, cache_dir: Path) -> Path:
     path = cache_dir / f"eo_{st.lower()}.csv"
     if not path.exists():
         url = URL.format(st=st.lower())
-        r = requests.get(url, timeout=300)
+        r = requests.get(url, timeout=300, headers={"User-Agent": USER_AGENT})
         r.raise_for_status()
         path.write_bytes(r.content)
         path.with_suffix(".source.json").write_text(json.dumps({

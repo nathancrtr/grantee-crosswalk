@@ -3,7 +3,7 @@
 Each case is a real (recipient, BMF candidate) pair that the first matcher got wrong,
 plus the correct pairs that the fix must not break.
 """
-from grantee_resolver.match import best_match, normalize
+from grantee_crosswalk.match import best_match, normalize
 
 
 def bmf(name, city="X", zip_="00000", ein="1"):

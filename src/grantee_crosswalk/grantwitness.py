@@ -21,6 +21,8 @@ from pathlib import Path
 
 import requests
 
+from . import USER_AGENT
+
 AGENCIES = ["nih", "cdc", "samhsa", "ahrq", "nsf", "epa"]
 
 # Pinned release of github.com/signaltrack/gw-grant-disruption-data. Bump deliberately;
@@ -39,7 +41,7 @@ def fetch(agency: str, dest_dir: Path, live: bool = False, tag: str = PINNED_REL
     """Download one agency table and write a provenance sidecar beside it."""
     url = LIVE.format(agency=agency) if live else ARCHIVE.format(tag=tag, agency=agency)
     dest_dir.mkdir(parents=True, exist_ok=True)
-    r = requests.get(url, timeout=120, headers={"User-Agent": "grantee-resolver/0.1"})
+    r = requests.get(url, timeout=120, headers={"User-Agent": USER_AGENT})
     r.raise_for_status()
     path = dest_dir / f"{agency}.csv"
     path.write_bytes(r.content)

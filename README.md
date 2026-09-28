@@ -1,4 +1,4 @@
-# grantee-resolver
+# grantee-crosswalk
 
 Resolves terminated federal grant recipients to their **UEI** (from USAspending.gov) and
 **EIN** (from the IRS Exempt Organizations Business Master File). Also snapshots the
