@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below, along with Grant Witness for the award status it builds on."
+type: dataset
+title: "grantee-crosswalk: UEI and EIN for terminated federal grant recipients"
+abstract: >-
+  Terminated federal grant recipients from Grant Witness, keyed on their Award IDs and
+  resolved to UEI (USAspending.gov) and EIN (IRS Exempt Organizations Business Master
+  File), with nightly snapshots of the HHS TAGGS list of terminated grants.
+authors:
+  - given-names: Nathan
+    family-names: Carter
+repository-code: "https://github.com/nathancrtr/grantee-crosswalk"
+license: [CC0-1.0, MIT]
+keywords: [federal grants, grant terminations, UEI, EIN, crosswalk, HHS, TAGGS]

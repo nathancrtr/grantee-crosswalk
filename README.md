@@ -106,5 +106,7 @@ directly is still worth doing.
 - [Grant Witness](https://grantwitness.org), the upstream status data
 - [signaltrack/gw-grant-disruption-data](https://github.com/signaltrack/gw-grant-disruption-data), their archive of it
 - [HHS TAGGS terminated grants PDF](https://taggs.hhs.gov/Content/Data/HHS_Grants_Terminated.pdf)
-- Nonprofit Open Data Collective `npmatch`, the matching cascade this simplifies
-- GAO-26-108615, the DOGE "Wall of Receipts" reconciliation (already done; not repeated here)
+- [Nonprofit Open Data Collective `npmatch`](https://github.com/Nonprofit-Open-Data-Collective/npmatch),
+  the matching cascade this simplifies
+- [GAO-26-108615](https://www.gao.gov/products/gao-26-108615), the DOGE "Wall of Receipts"
+  reconciliation (already done; not repeated here)
