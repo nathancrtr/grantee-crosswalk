@@ -11,11 +11,12 @@ EPA. This project keys on their Award IDs and adds organization identifiers, add
 congressional district, NTEE category, and reported revenue, so a lost award can be
 compared to the size of the organization that lost it.
 
-**Status (2026-09-04):** CDC file resolved and hand-checked. Every YES, MAYBE and NO row
-was read against its IRS record; the veto rules that came out of that are in
-`data/resolved/README.md` with the residual verdicts. The nightly snapshot has run once and
-diffed clean against the first. Nothing here has been validated by the Grant Witness
-maintainers.
+**Status (2026-09-28):** CDC file resolved and hand-checked on 2026-09-04. Every YES,
+MAYBE and NO row was read against its IRS record. The veto rules that came out of that,
+the residual verdicts, and the one match that has moved since are in
+`data/resolved/README.md`. The TAGGS snapshot has run nightly since 2026-09-03. HHS
+has republished the list about once a week, and each republication appears as a diff in
+`data/taggs/changes/`. Nothing here has been validated by the Grant Witness maintainers.
 
 ## Principles
 
@@ -26,7 +27,6 @@ maintainers.
 - Summaries exclude routine terminations by default. HHS's list mixes policy terminations
   ("Departmental Authority", "Termination for Cause") with bilateral and
   mutual-convenience closeouts, which are often ordinary. The full data is always kept.
-- No donate button. See the project brief for why.
 
 ## Data flow
 
