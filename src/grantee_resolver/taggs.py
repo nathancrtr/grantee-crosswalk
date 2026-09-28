@@ -9,9 +9,13 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
-from datetime import date
+import re
+import unicodedata
+from collections import defaultdict
+from datetime import date, datetime
 from pathlib import Path
 
+import ftfy
 import pdfplumber
 import requests
 
@@ -79,22 +83,67 @@ def write_snapshot(rows: list[dict], out_dir: Path, day: date | None = None) -> 
     return path
 
 
-def load_snapshot(path: Path) -> dict[str, dict]:
+def load_snapshot(path: Path) -> list[dict]:
     with path.open(newline="") as f:
-        return {row_key(r): r for r in csv.DictReader(f)}
+        return list(csv.DictReader(f))
 
 
-def diff(prev: dict[str, dict], curr: dict[str, dict]) -> dict:
-    """Rows added (new terminations) and removed (likely reinstated or corrected)."""
-    added = [curr[k] for k in curr.keys() - prev.keys()]
-    removed = [prev[k] for k in prev.keys() - curr.keys()]
-    changed = []
-    for k in curr.keys() & prev.keys():
-        a, b = prev[k], curr[k]
-        fields = [c for c in COLUMNS if a.get(c) != b.get(c)]
-        if fields:
-            changed.append({"key": k, "fields": fields, "before": {c: a[c] for c in fields}, "after": {c: b[c] for c in fields}})
-    return {"added": added, "removed": removed, "changed": changed}
+MONEY_COLUMNS = {"obligated", "expended", "paid", "unliquidated"}
+
+
+def comparable(col: str, v: str):
+    """A cell's value with HHS's formatting churn removed, for comparison only.
+
+    Each weekly regeneration of the PDF can change date padding, capitalization,
+    where a long title wraps, and whether its text comes out as mojibake
+    ("Alzheimerâ€™s"). None of that is a change to the award. Snapshots keep
+    the raw text; only the diff compares through this.
+    """
+    v = v or ""
+    if col == "action_date":
+        try:
+            return datetime.strptime(v.strip(), "%m/%d/%Y").date()
+        except ValueError:
+            pass
+    if col in MONEY_COLUMNS:
+        return money(v)
+    v = unicodedata.normalize("NFKC", ftfy.fix_text(v)).casefold()
+    return re.sub(r"\s+", "", v)
+
+
+def _fields(a: dict, b: dict) -> list[str]:
+    return [c for c in COLUMNS if comparable(c, a.get(c)) != comparable(c, b.get(c))]
+
+
+def diff(prev: list[dict], curr: list[dict]) -> dict:
+    """Rows added (new terminations), removed (likely reinstated or corrected), changed.
+
+    A key can cover several rows (13 keys do as of 2026-09), so rows are matched
+    within a key rather than looked up by it. Rows equal after `comparable` pair off
+    first and count toward `reformatted` if their raw text differs. The rest pair in
+    file order as changes, and any surplus on one side is an addition or removal.
+    """
+    before, after = defaultdict(list), defaultdict(list)
+    for r in prev:
+        before[row_key(r)].append(r)
+    for r in curr:
+        after[row_key(r)].append(r)
+    added, removed, changed, reformatted = [], [], [], 0
+    for k in sorted(before.keys() | after.keys()):
+        a, b = list(before[k]), []
+        for r in after[k]:
+            same = next((i for i, x in enumerate(a) if not _fields(x, r)), None)
+            if same is None:
+                b.append(r)
+                continue
+            x = a.pop(same)
+            reformatted += any(x[c] != r[c] for c in COLUMNS)
+        for x, y in zip(a, b):
+            fields = _fields(x, y)
+            changed.append({"key": k, "fields": fields, "before": {c: x[c] for c in fields}, "after": {c: y[c] for c in fields}})
+        removed += a[len(b):]
+        added += b[len(a):]
+    return {"added": added, "removed": removed, "changed": changed, "reformatted": reformatted}
 
 
 def write_diff(d: dict, out_dir: Path, day: date | None = None) -> Path:
