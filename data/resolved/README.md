@@ -2,8 +2,9 @@
 
 **cdc.csv** has one row per award in the Grant Witness CDC table, keyed on their Award ID,
 with the recipient's USAspending identifiers and, where one could be found, its IRS
-record. Produced 2026-09-04 from gw-data release `2026-08-26.6` (see `cdc.meta.json`
-for the source URL and SHA-256). Licence CC0 (see `../LICENSE`).
+record. Hand-checked 2026-09-04. Last resolved against Grant Witness archive release
+`2026-09-21` and the IRS files posted 2026-09-07; `cdc.meta.json` has the URL and
+SHA-256 of each. Licence CC0 (see `../LICENSE`).
 
 ## Columns
 
@@ -37,8 +38,8 @@ No model is involved. For each award:
 
 | Tier | Rows | Meaning |
 |---|---|---|
-| `YES` | 112 | Normalized names identical (allowing "Board of Trustees of", "Regents of"); or similarity ≥ 0.97 with city match; or ≥ 0.93 with ZIP match |
-| `MAYBE` | 6 | Similarity ≥ 0.88, or one name is a word-subset of the other. Needs a human. See verdicts below |
+| `YES` | 113 | Normalized names identical (allowing "Board of Trustees of", "Regents of"); or similarity ≥ 0.97 with city match; or ≥ 0.93 with ZIP match |
+| `MAYBE` | 5 | Similarity ≥ 0.88, or one name is a word-subset of the other. Needs a human. See verdicts below |
 | `NO` | 10 | No candidate survived. `ein` is blank; `bmf_name` shows the closest rejected candidate and `match_method` says why |
 | `GOV` | 418 | Government entity; not looked up |
 | `FOREIGN` | 32 | Recipient outside the US; not in the BMF |
@@ -95,7 +96,7 @@ After the rules above, 38 rows carry a different `ein` than the first pass. The 
 | NU58DP007617 | Stapleton Foundation for Sustainable Urban Communities | STAPLETON FOUNDATION FOR, Denver | Same org. IRS name is truncated |
 | NH23IP922656 | Council of Medical Specia | COUNCIL OF MEDICAL SPECIALTY SOCIETIES | Same org. Name is truncated upstream in USAspending |
 | NU65PS923721 | Health Research, Inc. | HEALTH RESEARCH INCORPORATED ELIZABETH WOOD, Menands NY, revenue $1.09B | Same org (New York State's HRI) |
-| NU62PS924658 | South Side Help Center | SOUTH SIDE LEGAL CENTER, Chicago | Different org |
+| NU62PS924658 | South Side Help Center | SOUTH SIDE LEGAL CENTER, Chicago | Different org. Now `YES`; see below |
 | NU50CK000618 | University of South Florida | USF INSTITUTE OF APPLIED ENGINEERING | Different org. USF itself does not file |
 | NU50CD300862, U01CK000643 | UCLA | rejected: USC, and a dozen UCLA affiliates | Correctly NO. UCLA has no own BMF row in CA |
 | NU50CK000622 | The General Hospital Corporation (Mass General) | rejected: disability trust, nurses' alumnae | Not in the MA file under this name |
@@ -110,6 +111,26 @@ After the rules above, 38 rows carry a different `ein` than the first pass. The 
 The four "same org" MAYBE rows are left as `MAYBE` on purpose: the rule that flagged them
 is right in general, and the tier tells a reader exactly which rows a human vouched for.
 
+## Since the hand check
+
+**2026-09-07: new IRS files.** Resolving against them changed 19 rows:
+
+- **South Side Help Center (NU62PS924658), `MAYBE` to `YES`.** The new file lists SOUTH
+  SIDE HELP CENTER INC, Chicago, EIN 36-3532259: exact name, same city. The 2026-09-04
+  Illinois file had no record under that name, so the earlier "different org" verdict
+  was right about the record it saw.
+- 13 rows: `bmf_revenue` updated.
+- 5 rows: `bmf_city`, `bmf_zip5` and the geo score updated (4 of them revenue too); same
+  EIN.
+
+**2026-09-28: Grant Witness release `2026-09-21`** (from `2026-08-26.6`). Same 580
+awards. 14 rows changed, all in the columns copied verbatim from Grant Witness. Two
+statuses moved from "Reinstated (unconfirmed)" to "Reinstated (confirmed)" (NU62PS924789,
+NE11OE000108). Two cities changed (NE11OE000011 Tallahassee to Miami, NU58DP007634
+Stockton to Sacramento), and the University of Chicago gained a leading "The". The other
+nine are capitalization only. No match changed. Matching uses USAspending's name and
+address wherever USAspending has the award (577 of 580), which covers all 14.
+
 ## Known limits
 
 - Candidates come from the recipient's own state only. Organizations that file from a
@@ -119,4 +140,6 @@ is right in general, and the tier tells a reader exactly which rows a human vouc
 - Public universities and hospitals are inconsistently present in the BMF. Their
   `bmf_revenue` is usually blank even when the EIN is found.
 - `GOV` rows are never looked up, though some government-adjacent bodies do have EINs.
+- The hand check covers the rows as of 2026-09-04, plus the changes listed under "Since
+  the hand check". A rerun against a newer IRS file can move matches again.
 - Nothing here has been reviewed by the Grant Witness maintainers.

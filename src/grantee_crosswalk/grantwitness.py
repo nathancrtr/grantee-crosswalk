@@ -1,13 +1,15 @@
 """Fetch Grant Witness per-agency tables.
 
 Grant Witness (https://grantwitness.org) publishes weekly CSVs. The team also archives
-them at https://github.com/signaltrack/gw-data, which cuts a dated release per pull and
-deposits to Zenodo; that repo's `.zenodo.json` declares the data CC0-1.0.
+them at https://github.com/signaltrack/gw-grant-disruption-data (formerly gw-data), which
+cuts a dated release per pull and deposits to Zenodo; that repo's `.zenodo.json` declares
+the data CC0-1.0.
 
 We fetch from a pinned release tag by default, so a run is reproducible and cites a
 fixed upstream snapshot. Pass live=True for same-day freshness at the cost of that.
 The CSVs themselves are not committed here (see .gitignore); each fetch writes a
-`{agency}.source.json` sidecar recording where the bytes came from, and that is.
+`{agency}.source.json` sidecar recording where the bytes came from, and that sidecar
+is committed.
 """
 from __future__ import annotations
 
@@ -19,12 +21,14 @@ from pathlib import Path
 
 import requests
 
+from . import USER_AGENT
+
 AGENCIES = ["nih", "cdc", "samhsa", "ahrq", "nsf", "epa"]
 
-# Pinned release of github.com/signaltrack/gw-data. Bump deliberately; the resolved
-# outputs record which tag produced them.
-PINNED_RELEASE = "2026-08-26.6"
-ARCHIVE = "https://raw.githubusercontent.com/signaltrack/gw-data/{tag}/data/{agency}.csv"
+# Pinned release of github.com/signaltrack/gw-grant-disruption-data. Bump deliberately;
+# the resolved outputs record which tag produced them.
+PINNED_RELEASE = "2026-09-21"
+ARCHIVE = "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/{tag}/data/{agency}.csv"
 LIVE = "https://data.grant-witness.us/{agency}/dl-table.csv"
 
 
@@ -37,7 +41,7 @@ def fetch(agency: str, dest_dir: Path, live: bool = False, tag: str = PINNED_REL
     """Download one agency table and write a provenance sidecar beside it."""
     url = LIVE.format(agency=agency) if live else ARCHIVE.format(tag=tag, agency=agency)
     dest_dir.mkdir(parents=True, exist_ok=True)
-    r = requests.get(url, timeout=120, headers={"User-Agent": "grantee-resolver/0.1"})
+    r = requests.get(url, timeout=120, headers={"User-Agent": USER_AGENT})
     r.raise_for_status()
     path = dest_dir / f"{agency}.csv"
     path.write_bytes(r.content)
@@ -50,9 +54,11 @@ def fetch(agency: str, dest_dir: Path, live: bool = False, tag: str = PINNED_REL
     }
     # Only rewrite the sidecar when the bytes or their source actually changed, so a
     # nightly re-fetch of unchanged data does not commit a new timestamp every day.
+    # A new URL for the same bytes (the archive repo was renamed) keeps its first_seen.
     prev = source(path)
     if {k: prev.get(k) for k in record} != record:
-        record["first_seen"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        same_bytes = prev.get("sha256") == record["sha256"] and "first_seen" in prev
+        record["first_seen"] = prev["first_seen"] if same_bytes else datetime.now(timezone.utc).isoformat(timespec="seconds")
         source_path(path).write_text(json.dumps(record, indent=1) + "\n")
     return path
 

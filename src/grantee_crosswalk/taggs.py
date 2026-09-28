@@ -19,6 +19,8 @@ import ftfy
 import pdfplumber
 import requests
 
+from . import USER_AGENT
+
 TAGGS_URL = "https://taggs.hhs.gov/Content/Data/HHS_Grants_Terminated.pdf"
 COLUMNS = [
     "opdiv", "fain", "obligation_doc", "recipient", "state", "country",
@@ -34,7 +36,7 @@ POLICY_TYPES = {"Departmental Authority", "Termination for Cause"}
 def download(dest: Path) -> tuple[Path, str]:
     """Download the PDF; return (path, sha256)."""
     dest.parent.mkdir(parents=True, exist_ok=True)
-    r = requests.get(TAGGS_URL, timeout=120, headers={"User-Agent": "grantee-resolver/0.1"})
+    r = requests.get(TAGGS_URL, timeout=120, headers={"User-Agent": USER_AGENT})
     r.raise_for_status()
     dest.write_bytes(r.content)
     return dest, hashlib.sha256(r.content).hexdigest()

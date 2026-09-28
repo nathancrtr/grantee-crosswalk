@@ -1,18 +1,24 @@
 [project]
-name = "grantee-resolver"
+name = "grantee-crosswalk"
 version = "0.1.0"
 description = "Resolve terminated federal grant recipients to UEI and EIN, with provenance."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Nathan Carter" }]
 requires-python = ">=3.11"
 dependencies = ["pdfplumber>=0.11", "requests>=2.31", "rapidfuzz>=3.0", "ftfy>=6.0"]
+
+[project.urls]
+Repository = "https://github.com/nathancrtr/grantee-crosswalk"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 
 [project.scripts]
-grantee = "grantee_resolver.cli:main"
+grantee = "grantee_crosswalk.cli:main"
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

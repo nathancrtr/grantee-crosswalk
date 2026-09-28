@@ -4,7 +4,7 @@ The 2026-09-26 PDF re-rendered nearly every row (dates lost their zero padding,
 titles came out as mojibake) and the old diff reported 2,438 changes. Separately,
 13 keys cover more than one row, and the old diff kept only the last row per key.
 """
-from grantee_resolver.taggs import COLUMNS, diff
+from grantee_crosswalk.taggs import COLUMNS, diff
 
 
 def row(**kw):

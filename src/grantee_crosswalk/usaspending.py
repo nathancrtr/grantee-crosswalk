@@ -11,6 +11,8 @@ from pathlib import Path
 
 import requests
 
+from . import USER_AGENT
+
 API = "https://api.usaspending.gov/api/v2/awards/{award_id}/"
 
 
@@ -19,7 +21,7 @@ def fetch_award(award_id: str, cache_dir: Path, sleep: float = 0.2) -> dict | No
     cached = cache_dir / f"{award_id}.json"
     if cached.exists():
         return json.loads(cached.read_text())
-    r = requests.get(API.format(award_id=award_id), timeout=60, headers={"User-Agent": "grantee-resolver/0.1"})
+    r = requests.get(API.format(award_id=award_id), timeout=60, headers={"User-Agent": USER_AGENT})
     time.sleep(sleep)
     if r.status_code == 404:
         cached.write_text("null")

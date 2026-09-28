@@ -1,4 +1,4 @@
-# grantee-resolver
+# grantee-crosswalk
 
 Resolves terminated federal grant recipients to their **UEI** (from USAspending.gov) and
 **EIN** (from the IRS Exempt Organizations Business Master File). Also snapshots the
@@ -11,11 +11,12 @@ EPA. This project keys on their Award IDs and adds organization identifiers, add
 congressional district, NTEE category, and reported revenue, so a lost award can be
 compared to the size of the organization that lost it.
 
-**Status (2026-09-04):** CDC file resolved and hand-checked. Every YES, MAYBE and NO row
-was read against its IRS record; the veto rules that came out of that are in
-`data/resolved/README.md` with the residual verdicts. The nightly snapshot has run once and
-diffed clean against the first. Nothing here has been validated by the Grant Witness
-maintainers.
+**Status (2026-09-28):** CDC file resolved and hand-checked on 2026-09-04. Every YES,
+MAYBE and NO row was read against its IRS record. The veto rules that came out of that,
+the residual verdicts, and the one match that has moved since are in
+`data/resolved/README.md`. The TAGGS snapshot has run nightly since 2026-09-03. HHS
+has republished the list about once a week, and each republication appears as a diff in
+`data/taggs/changes/`. Nothing here has been validated by the Grant Witness maintainers.
 
 ## Principles
 
@@ -26,7 +27,6 @@ maintainers.
 - Summaries exclude routine terminations by default. HHS's list mixes policy terminations
   ("Departmental Authority", "Termination for Cause") with bilateral and
   mutual-convenience closeouts, which are often ordinary. The full data is always kept.
-- No donate button. See the project brief for why.
 
 ## Data flow
 
@@ -52,23 +52,28 @@ python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 .venv/bin/grantee resolve cdc      # write data/resolved/cdc.csv
 ```
 
-`.github/workflows/nightly.yml` runs the same three steps daily and commits the result.
+`.github/workflows/nightly.yml` runs `grantee taggs` daily and commits any new snapshot.
+Resolving is run by hand. The IRS replaces its files in place, so a rerun can move a
+match, and a moved match should be reviewed before it is committed.
 
 ## Grant Witness input
 
 The Grant Witness CSVs are fetched at run time, not committed. The Grant Witness team
-archives them at [signaltrack/gw-data](https://github.com/signaltrack/gw-data), which cuts
-a dated release per pull, and `grantee gw` reads from a release tag pinned in
-`grantwitness.py`. So a run is reproducible and the input is citable, and this repo does
-not carry a second copy of a 25 MB file someone else already archives.
+archives them at
+[signaltrack/gw-grant-disruption-data](https://github.com/signaltrack/gw-grant-disruption-data)
+(formerly `gw-data`), which cuts a dated release per pull, and `grantee gw` reads from a
+release tag pinned in `grantwitness.py`. So a run is reproducible and the input is
+citable, and this repo does not carry a second copy of a file someone else already
+archives.
 
 Every fetch writes `data/grantwitness/{agency}.source.json` with the URL, release tag,
-SHA-256 of the bytes, and when that content was first seen. Each resolve writes `data/resolved/{agency}.meta.json`
-carrying that record alongside the run's tier counts. Those sidecars are committed; the
-CSVs are not.
+SHA-256 of the bytes, and when that content was first seen. Each resolve writes
+`data/resolved/{agency}.meta.json` carrying that record, the SHA-256 and IRS posting date
+of every state file it matched against, and the run's tier counts. Those sidecars are
+committed; the upstream CSVs are not.
 
-Bump `PINNED_RELEASE` to take new upstream data. Until you do, nightly runs reproduce the
-same resolved output and commit nothing, so the data moves only when you move the pin.
+To take new upstream data, bump `PINNED_RELEASE` and rerun `grantee resolve`. The
+resolved output changes only when someone does that.
 Pass `--live` to pull from grantwitness.org instead, or `--tag` for a one-off release.
 
 ## Match tiers
@@ -99,7 +104,9 @@ directly is still worth doing.
 ## Related
 
 - [Grant Witness](https://grantwitness.org), the upstream status data
-- [signaltrack/gw-data](https://github.com/signaltrack/gw-data), their archive of it
+- [signaltrack/gw-grant-disruption-data](https://github.com/signaltrack/gw-grant-disruption-data), their archive of it
 - [HHS TAGGS terminated grants PDF](https://taggs.hhs.gov/Content/Data/HHS_Grants_Terminated.pdf)
-- Nonprofit Open Data Collective `npmatch`, the matching cascade this simplifies
-- GAO-26-108615, the DOGE "Wall of Receipts" reconciliation (already done; not repeated here)
+- [Nonprofit Open Data Collective `npmatch`](https://github.com/Nonprofit-Open-Data-Collective/npmatch),
+  the matching cascade this simplifies
+- [GAO-26-108615](https://www.gao.gov/products/gao-26-108615), the DOGE "Wall of Receipts"
+  reconciliation (already done; not repeated here)

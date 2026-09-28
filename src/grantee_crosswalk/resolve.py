@@ -64,7 +64,8 @@ def resolve(agency: str, gw_path: Path, cache_dir: Path, out_path: Path, limit: 
         "uei_found": sum(1 for o in out if o["uei"]),
         "tiers": dict(tiers),
         "grant_witness_source": grantwitness.source(gw_path),
+        "irs_bmf_source": {st: bmf.source(st, cache_dir / "bmf") for st in sorted(bmf_by_state) if bmf_by_state[st] is not None},
     }
-    # The upstream CSV is not committed, so record which snapshot produced this output.
+    # Neither upstream file is committed, so record which copies produced this output.
     out_path.with_suffix(".meta.json").write_text(json.dumps(stats, indent=1) + "\n")
     return stats

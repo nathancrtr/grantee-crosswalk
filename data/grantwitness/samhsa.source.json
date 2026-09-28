@@ -1,8 +1,8 @@
 {
  "agency": "samhsa",
- "url": "https://raw.githubusercontent.com/signaltrack/gw-data/2026-08-26.6/data/samhsa.csv",
- "release": "2026-08-26.6",
- "sha256": "b6c503cbaf6e101bb69492c857b161cb5ce76fc50f5310ac18c3fb2eb3608aa5",
- "bytes": 9647671,
- "first_seen": "2026-09-03T23:32:19+00:00"
+ "url": "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/2026-09-21/data/samhsa.csv",
+ "release": "2026-09-21",
+ "sha256": "b31f0ec673c8418ea83f3438a049a72d1ab8fc93a0192da79d5e5625dbfee040",
+ "bytes": 9650648,
+ "first_seen": "2026-09-28T15:33:44+00:00"
 }
