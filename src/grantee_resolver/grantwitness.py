@@ -1,13 +1,15 @@
 """Fetch Grant Witness per-agency tables.
 
 Grant Witness (https://grantwitness.org) publishes weekly CSVs. The team also archives
-them at https://github.com/signaltrack/gw-data, which cuts a dated release per pull and
-deposits to Zenodo; that repo's `.zenodo.json` declares the data CC0-1.0.
+them at https://github.com/signaltrack/gw-grant-disruption-data (formerly gw-data), which
+cuts a dated release per pull and deposits to Zenodo; that repo's `.zenodo.json` declares
+the data CC0-1.0.
 
 We fetch from a pinned release tag by default, so a run is reproducible and cites a
 fixed upstream snapshot. Pass live=True for same-day freshness at the cost of that.
 The CSVs themselves are not committed here (see .gitignore); each fetch writes a
-`{agency}.source.json` sidecar recording where the bytes came from, and that is.
+`{agency}.source.json` sidecar recording where the bytes came from, and that sidecar
+is committed.
 """
 from __future__ import annotations
 
@@ -21,10 +23,10 @@ import requests
 
 AGENCIES = ["nih", "cdc", "samhsa", "ahrq", "nsf", "epa"]
 
-# Pinned release of github.com/signaltrack/gw-data. Bump deliberately; the resolved
-# outputs record which tag produced them.
+# Pinned release of github.com/signaltrack/gw-grant-disruption-data. Bump deliberately;
+# the resolved outputs record which tag produced them.
 PINNED_RELEASE = "2026-08-26.6"
-ARCHIVE = "https://raw.githubusercontent.com/signaltrack/gw-data/{tag}/data/{agency}.csv"
+ARCHIVE = "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/{tag}/data/{agency}.csv"
 LIVE = "https://data.grant-witness.us/{agency}/dl-table.csv"
 
 

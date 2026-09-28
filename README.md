@@ -57,9 +57,10 @@ python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 ## Grant Witness input
 
 The Grant Witness CSVs are fetched at run time, not committed. The Grant Witness team
-archives them at [signaltrack/gw-data](https://github.com/signaltrack/gw-data), which cuts
-a dated release per pull, and `grantee gw` reads from a release tag pinned in
-`grantwitness.py`. So a run is reproducible and the input is citable, and this repo does
+archives them at
+[signaltrack/gw-grant-disruption-data](https://github.com/signaltrack/gw-grant-disruption-data)
+(formerly `gw-data`), which cuts a dated release per pull, and `grantee gw` reads from a
+release tag pinned in `grantwitness.py`. So a run is reproducible and the input is citable, and this repo does
 not carry a second copy of a 25 MB file someone else already archives.
 
 Every fetch writes `data/grantwitness/{agency}.source.json` with the URL, release tag,
@@ -99,7 +100,7 @@ directly is still worth doing.
 ## Related
 
 - [Grant Witness](https://grantwitness.org), the upstream status data
-- [signaltrack/gw-data](https://github.com/signaltrack/gw-data), their archive of it
+- [signaltrack/gw-grant-disruption-data](https://github.com/signaltrack/gw-grant-disruption-data), their archive of it
 - [HHS TAGGS terminated grants PDF](https://taggs.hhs.gov/Content/Data/HHS_Grants_Terminated.pdf)
 - Nonprofit Open Data Collective `npmatch`, the matching cascade this simplifies
 - GAO-26-108615, the DOGE "Wall of Receipts" reconciliation (already done; not repeated here)

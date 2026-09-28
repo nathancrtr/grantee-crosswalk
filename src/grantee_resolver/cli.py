@@ -59,7 +59,7 @@ def cmd_resolve(args):
 
 def _gw_source_args(p):
     p.add_argument("--live", action="store_true", help="fetch from grantwitness.org instead of the pinned release")
-    p.add_argument("--tag", default=grantwitness.PINNED_RELEASE, help="gw-data release tag to fetch")
+    p.add_argument("--tag", default=grantwitness.PINNED_RELEASE, help="Grant Witness archive release tag to fetch")
 
 
 def main():
@@ -68,7 +68,7 @@ def main():
     s = sub.add_parser("taggs", help="snapshot + diff the HHS terminated-grants PDF")
     s.add_argument("--rediff", action="store_true", help="recompute committed diffs from committed snapshots; no download")
     s.set_defaults(fn=cmd_taggs)
-    s = sub.add_parser("gw", help="fetch Grant Witness tables from the pinned gw-data release")
+    s = sub.add_parser("gw", help="fetch Grant Witness tables from the pinned Grant Witness archive release")
     s.add_argument("agencies", nargs="*", default=["cdc"]); _gw_source_args(s); s.set_defaults(fn=cmd_gw)
     s = sub.add_parser("resolve", help="resolve a Grant Witness table to UEI/EIN")
     s.add_argument("agency"); s.add_argument("--limit", type=int); _gw_source_args(s); s.set_defaults(fn=cmd_resolve)

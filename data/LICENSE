@@ -6,7 +6,7 @@ Upstream inputs keep their own terms:
 - data/taggs/: derived from the HHS TAGGS "Grants Terminated" PDF (U.S. Government work).
 - data/grantwitness/: fetched at run time from Grant Witness (https://grantwitness.org)
   and not committed here. The site states no license, but the team's archive repo
-  (https://github.com/signaltrack/gw-data) declares the data CC0-1.0 in its Zenodo
-  metadata. data/resolved/ carries a handful of their columns per row under that
+  (https://github.com/signaltrack/gw-grant-disruption-data) declares the data CC0-1.0 in
+  its Zenodo metadata. data/resolved/ carries a handful of their columns per row under that
   understanding; each output records the upstream release tag and SHA-256 it came from.
 - USAspending.gov and IRS Exempt Organizations Business Master File: U.S. Government works.
