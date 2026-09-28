@@ -12,10 +12,376 @@
  },
  "grant_witness_source": {
   "agency": "cdc",
-  "url": "https://raw.githubusercontent.com/signaltrack/gw-data/2026-08-26.6/data/cdc.csv",
+  "url": "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/2026-08-26.6/data/cdc.csv",
   "release": "2026-08-26.6",
   "sha256": "cba2566f16042d3822d3075ca69a63734de7338b49846980fffec3f19776b64d",
   "bytes": 1488072,
   "first_seen": "2026-09-03T23:32:19+00:00"
+ },
+ "irs_bmf_source": {
+  "AK": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ak.csv",
+   "sha256": "187c1ac3ecbab65e9aae06f1f99ee132beed5bb01f06270cc8e123eb5cd2df76",
+   "bytes": 999748,
+   "last_modified": "Mon, 07 Sep 2026 04:12:00 GMT",
+   "fetched": "2026-09-28T04:15:27+00:00"
+  },
+  "AL": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_al.csv",
+   "sha256": "12202f4481bdb05f8ba9d1f285833364919f9bad4e52ac3d1c16f49bd1fdcf08",
+   "bytes": 4551293,
+   "last_modified": "Mon, 07 Sep 2026 04:12:02 GMT",
+   "fetched": "2026-09-28T04:15:15+00:00"
+  },
+  "AR": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ar.csv",
+   "sha256": "5f6a3c34b4509e431f76f32d3c457e795ddfd015492658edef9346d88f55757b",
+   "bytes": 2785464,
+   "last_modified": "Mon, 07 Sep 2026 04:12:03 GMT",
+   "fetched": "2026-09-28T04:15:27+00:00"
+  },
+  "AZ": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_az.csv",
+   "sha256": "e40bcb7655dad227ffeb1c87306590964d6917ac17ecf2966009d8718b63d865",
+   "bytes": 5392263,
+   "last_modified": "Mon, 07 Sep 2026 04:12:04 GMT",
+   "fetched": "2026-09-28T04:15:19+00:00"
+  },
+  "CA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ca.csv",
+   "sha256": "1b6a88df3f8cf70e7516f6d3537acaa77de8079dd3ded183b711d4f3bb458adf",
+   "bytes": 35138893,
+   "last_modified": "Mon, 07 Sep 2026 04:12:06 GMT",
+   "fetched": "2026-09-28T04:14:56+00:00"
+  },
+  "CO": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_co.csv",
+   "sha256": "b5f43843b54314eb151140931969299e4174be96d30bd8acc9807e1dc6757cb3",
+   "bytes": 6264107,
+   "last_modified": "Mon, 07 Sep 2026 04:12:07 GMT",
+   "fetched": "2026-09-28T04:14:55+00:00"
+  },
+  "CT": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ct.csv",
+   "sha256": "1fca0131994e08697c7bb209679bdd4d19dd9188d16b8d38d95c227d5c2a3201",
+   "bytes": 4139981,
+   "last_modified": "Mon, 07 Sep 2026 04:12:08 GMT",
+   "fetched": "2026-09-28T04:15:19+00:00"
+  },
+  "DC": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_dc.csv",
+   "sha256": "2a7946a38fee9bb14d31d516361eb33cb1b0715377cd916e11b3e323d622d2cb",
+   "bytes": 2597359,
+   "last_modified": "Mon, 07 Sep 2026 04:12:09 GMT",
+   "fetched": "2026-09-28T04:15:24+00:00"
+  },
+  "DE": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_de.csv",
+   "sha256": "5a4aff9d13f6f83c4d1be5f2787b802c5e8a92e092b340d2f7ac33a8fd0781ce",
+   "bytes": 1869674,
+   "last_modified": "Mon, 07 Sep 2026 04:12:13 GMT",
+   "fetched": "2026-09-28T04:15:17+00:00"
+  },
+  "FL": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_fl.csv",
+   "sha256": "8a662d47029a227a175b84460e81f6dd9a479ad1968fffcc59e73f38c89b1455",
+   "bytes": 19853085,
+   "last_modified": "Mon, 07 Sep 2026 04:12:16 GMT",
+   "fetched": "2026-09-28T04:15:16+00:00"
+  },
+  "GA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ga.csv",
+   "sha256": "977f508805a8ab7f16550fde5cacc74ebce0a0418b650a1b38ae03a453dbef6b",
+   "bytes": 10705159,
+   "last_modified": "Mon, 07 Sep 2026 04:12:18 GMT",
+   "fetched": "2026-09-28T04:15:25+00:00"
+  },
+  "HI": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_hi.csv",
+   "sha256": "7079ac8330aa48d91fc9a871fcbbb30ea50c38fccdd77b8e0853cf1949d7580e",
+   "bytes": 1625329,
+   "last_modified": "Mon, 07 Sep 2026 04:12:19 GMT",
+   "fetched": "2026-09-28T04:15:30+00:00"
+  },
+  "IA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ia.csv",
+   "sha256": "777e8acec3eb137587db57f1d507ae86f0a0f67355a330feddd5b68a3b0cfbed",
+   "bytes": 5236042,
+   "last_modified": "Mon, 07 Sep 2026 04:12:20 GMT",
+   "fetched": "2026-09-28T04:15:37+00:00"
+  },
+  "ID": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_id.csv",
+   "sha256": "339bd01f398eae8f9e9fede5a5679c969ff6928326b15203e7dcda0090f3e256",
+   "bytes": 1785748,
+   "last_modified": "Mon, 07 Sep 2026 04:12:21 GMT",
+   "fetched": "2026-09-28T04:15:37+00:00"
+  },
+  "IL": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_il.csv",
+   "sha256": "d33609cf1a57581adac2a6cbc7e2acd86bc082af894ee5f12df8875566ac0369",
+   "bytes": 13151975,
+   "last_modified": "Mon, 07 Sep 2026 04:12:22 GMT",
+   "fetched": "2026-09-28T04:14:58+00:00"
+  },
+  "IN": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_in.csv",
+   "sha256": "9f2cf3cc1cc3c58ed44d75e675d0e0cc7297e5331ce676f746eb55a8e8150525",
+   "bytes": 7771832,
+   "last_modified": "Mon, 07 Sep 2026 04:12:23 GMT",
+   "fetched": "2026-09-28T04:15:20+00:00"
+  },
+  "KS": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ks.csv",
+   "sha256": "6b8b5ff3db33d47e0d1d789be4ecd95d0197291061ee4f518a5dc8a36c8e199c",
+   "bytes": 3163997,
+   "last_modified": "Mon, 07 Sep 2026 04:12:24 GMT",
+   "fetched": "2026-09-28T04:15:37+00:00"
+  },
+  "KY": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ky.csv",
+   "sha256": "874725ce526f96c4298b8e7775f7de8c059c7c1dba417815e85bc3c515502cda",
+   "bytes": 3969622,
+   "last_modified": "Mon, 07 Sep 2026 04:12:25 GMT",
+   "fetched": "2026-09-28T04:15:14+00:00"
+  },
+  "LA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_la.csv",
+   "sha256": "2faadca09dfd9ea57dbd27bdc8a9687371c82a26d6d2c8a92e3d991568b261f9",
+   "bytes": 4147216,
+   "last_modified": "Mon, 07 Sep 2026 04:12:26 GMT",
+   "fetched": "2026-09-28T04:15:15+00:00"
+  },
+  "MA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ma.csv",
+   "sha256": "8a85a9e82d2acdebf668c957589c9e5bf3c4b15f6056aefed67cb16aa67eaa6a",
+   "bytes": 7757856,
+   "last_modified": "Mon, 07 Sep 2026 04:12:27 GMT",
+   "fetched": "2026-09-28T04:15:22+00:00"
+  },
+  "MD": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_md.csv",
+   "sha256": "c683fd488ae78d6680d1e870e4cadfb7843a9c6d3991e6d0c16f9ae8c34937ec",
+   "bytes": 7726653,
+   "last_modified": "Mon, 07 Sep 2026 04:12:30 GMT",
+   "fetched": "2026-09-28T04:15:23+00:00"
+  },
+  "ME": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_me.csv",
+   "sha256": "e33367f5eab66a472d83416e544aec1ee60703457ec99a006da06c5f33ff9cc6",
+   "bytes": 1766638,
+   "last_modified": "Mon, 07 Sep 2026 04:12:34 GMT",
+   "fetched": "2026-09-28T04:15:14+00:00"
+  },
+  "MI": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_mi.csv",
+   "sha256": "b3dc1e856298332c4759ed5e446e19680b55c661f77145a837f901e8fc29f541",
+   "bytes": 9747645,
+   "last_modified": "Mon, 07 Sep 2026 04:12:38 GMT",
+   "fetched": "2026-09-28T04:15:23+00:00"
+  },
+  "MN": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_mn.csv",
+   "sha256": "d5effd77ed6fced3a58ac9fc912a67dadbd8c6f452203987b1e70876a504cd40",
+   "bytes": 7031939,
+   "last_modified": "Mon, 07 Sep 2026 04:12:40 GMT",
+   "fetched": "2026-09-28T04:14:59+00:00"
+  },
+  "MO": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_mo.csv",
+   "sha256": "13f4a4f8dee4e0399afce5c20f2cf19e0471864d567006610b0681d082c87563",
+   "bytes": 7707327,
+   "last_modified": "Mon, 07 Sep 2026 04:12:41 GMT",
+   "fetched": "2026-09-28T04:15:32+00:00"
+  },
+  "MS": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ms.csv",
+   "sha256": "6be9ec376ace2d0f939e222e1e5e64d0aa01fa2e1302681d0a1c594632313084",
+   "bytes": 2738361,
+   "last_modified": "Mon, 07 Sep 2026 04:12:45 GMT",
+   "fetched": "2026-09-28T04:15:32+00:00"
+  },
+  "MT": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_mt.csv",
+   "sha256": "21dbb1859f0a9c7057e6be1e23090cc6ae8b99d94cac101b73237ab2c18a9ef5",
+   "bytes": 2112442,
+   "last_modified": "Mon, 07 Sep 2026 04:12:50 GMT",
+   "fetched": "2026-09-28T04:15:33+00:00"
+  },
+  "NC": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_nc.csv",
+   "sha256": "8983345b90847fa91f13afe23f8ccfd4d2a0e43e2fe5c89dc0e4cb7ae5ababbb",
+   "bytes": 10189413,
+   "last_modified": "Mon, 07 Sep 2026 04:12:58 GMT",
+   "fetched": "2026-09-28T04:15:18+00:00"
+  },
+  "ND": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_nd.csv",
+   "sha256": "521cca4c143757d9d6777a98e2632ae851e0901da5add2c4b5307c36d153910d",
+   "bytes": 1143522,
+   "last_modified": "Mon, 07 Sep 2026 04:12:59 GMT",
+   "fetched": "2026-09-28T04:15:31+00:00"
+  },
+  "NE": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ne.csv",
+   "sha256": "837ef9da8013d1315ad59fd03831fc4217c132e384d4453a2f0a26f0d480d95b",
+   "bytes": 2540467,
+   "last_modified": "Mon, 07 Sep 2026 04:13:02 GMT",
+   "fetched": "2026-09-28T04:15:17+00:00"
+  },
+  "NH": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_nh.csv",
+   "sha256": "eaea71336be4942de208b70f5178e34c9ba3d25b482f5fc9714e0fd1ada4440e",
+   "bytes": 1654807,
+   "last_modified": "Mon, 07 Sep 2026 04:13:03 GMT",
+   "fetched": "2026-09-28T04:15:33+00:00"
+  },
+  "NJ": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_nj.csv",
+   "sha256": "fdf809f7ada8dde6004d3e2f9999588ef425c77f8e10606077b2acd544b8030c",
+   "bytes": 9404514,
+   "last_modified": "Mon, 07 Sep 2026 04:13:05 GMT",
+   "fetched": "2026-09-28T04:15:29+00:00"
+  },
+  "NM": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_nm.csv",
+   "sha256": "bb2000c7bbdf4e1c92a25b7d2953e4b8f8707ed4e3dac6ddca90dc559311ec23",
+   "bytes": 1951177,
+   "last_modified": "Mon, 07 Sep 2026 04:13:06 GMT",
+   "fetched": "2026-09-28T04:15:29+00:00"
+  },
+  "NV": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_nv.csv",
+   "sha256": "9277d11b7a7f5d1509776f870595f8a66b59298936da0edda2686c14358c6757",
+   "bytes": 2327801,
+   "last_modified": "Mon, 07 Sep 2026 04:13:07 GMT",
+   "fetched": "2026-09-28T04:15:33+00:00"
+  },
+  "NY": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ny.csv",
+   "sha256": "ad95c07db1ab7563fcdc69d8ea194bb15d6a9d60ed80c036542eb8a15a28ff61",
+   "bytes": 21763654,
+   "last_modified": "Mon, 07 Sep 2026 04:13:08 GMT",
+   "fetched": "2026-09-28T04:15:13+00:00"
+  },
+  "OH": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_oh.csv",
+   "sha256": "be06ce872549bff7db4ca352051dfc13ac82f55592798c46b3c3eed359ecf4ca",
+   "bytes": 13440000,
+   "last_modified": "Mon, 07 Sep 2026 04:13:09 GMT",
+   "fetched": "2026-09-28T04:15:18+00:00"
+  },
+  "OK": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ok.csv",
+   "sha256": "e860e142ed089254e1eaa5850096da4d30e3765cfe68ecfe1a57058b4d0fa13b",
+   "bytes": 3843905,
+   "last_modified": "Mon, 07 Sep 2026 04:13:10 GMT",
+   "fetched": "2026-09-28T04:15:30+00:00"
+  },
+  "OR": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_or.csv",
+   "sha256": "e4d163397e9ba0ff8035d669d08a116c94db375023db94cd8e64c678014205e3",
+   "bytes": 4602697,
+   "last_modified": "Mon, 07 Sep 2026 04:13:11 GMT",
+   "fetched": "2026-09-28T04:15:33+00:00"
+  },
+  "PA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_pa.csv",
+   "sha256": "44f9135f3a2b4d06af6137e580cc43a5e34e0910fd49de12a5072671145a8811",
+   "bytes": 14372101,
+   "last_modified": "Mon, 07 Sep 2026 04:13:13 GMT",
+   "fetched": "2026-09-28T04:15:35+00:00"
+  },
+  "PR": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_pr.csv",
+   "sha256": "afcb81647ff19c2b4299b8b58326a567a92600b5892e1e4c4f987a52353c81e8",
+   "bytes": 449348,
+   "last_modified": "Mon, 07 Sep 2026 04:13:14 GMT",
+   "fetched": "2026-09-28T04:15:25+00:00"
+  },
+  "RI": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ri.csv",
+   "sha256": "40e1f58818b25becde0ba831c83a63e28b59cbddd846a6eddf0b4cb014d55682",
+   "bytes": 1169691,
+   "last_modified": "Mon, 07 Sep 2026 04:13:14 GMT",
+   "fetched": "2026-09-28T04:15:27+00:00"
+  },
+  "SC": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_sc.csv",
+   "sha256": "793af544e08c285cdbfda797677df48c158e82c1eee20581e1a4161553efc73e",
+   "bytes": 5569708,
+   "last_modified": "Mon, 07 Sep 2026 04:13:15 GMT",
+   "fetched": "2026-09-28T04:15:26+00:00"
+  },
+  "SD": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_sd.csv",
+   "sha256": "fc3933037aad18a10eb96f1621e4662ec211088d03edefdb7ef6bfbf0c9df075",
+   "bytes": 1266872,
+   "last_modified": "Mon, 07 Sep 2026 04:13:16 GMT",
+   "fetched": "2026-09-28T04:15:25+00:00"
+  },
+  "TN": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_tn.csv",
+   "sha256": "c111c263cd599b0e41797c5a478e1f2d7514145c6408e3d8d29ff7af6550c105",
+   "bytes": 6688415,
+   "last_modified": "Mon, 07 Sep 2026 04:13:19 GMT",
+   "fetched": "2026-09-28T04:15:24+00:00"
+  },
+  "TX": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_tx.csv",
+   "sha256": "21abdf01325083ee64be544b201ce947c44585747828d96c457043640d2064c0",
+   "bytes": 26359292,
+   "last_modified": "Mon, 07 Sep 2026 04:13:20 GMT",
+   "fetched": "2026-09-28T04:15:14+00:00"
+  },
+  "UT": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_ut.csv",
+   "sha256": "35a9f61e188303b7e38ef490b1b7ee0d4d78b86218569f8c87007c0ee66ac772",
+   "bytes": 2237292,
+   "last_modified": "Mon, 07 Sep 2026 04:13:21 GMT",
+   "fetched": "2026-09-28T04:15:35+00:00"
+  },
+  "VA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_va.csv",
+   "sha256": "3bd444644f373605b4c00d67787f0097138aa4e8a85f7be35018f51527a830b7",
+   "bytes": 9508327,
+   "last_modified": "Mon, 07 Sep 2026 04:13:22 GMT",
+   "fetched": "2026-09-28T04:15:31+00:00"
+  },
+  "VT": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_vt.csv",
+   "sha256": "2602a8e874ceb8910566a8eba84cb3e92f4b55d23c29f785265b591656fdbc11",
+   "bytes": 1146422,
+   "last_modified": "Mon, 07 Sep 2026 04:13:23 GMT",
+   "fetched": "2026-09-28T04:15:34+00:00"
+  },
+  "WA": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_wa.csv",
+   "sha256": "fe365f5d78c3df8c254df541fbf301b97fab125dfe66a3c87c29cd49fd1868ed",
+   "bytes": 7305071,
+   "last_modified": "Mon, 07 Sep 2026 04:13:24 GMT",
+   "fetched": "2026-09-28T04:15:18+00:00"
+  },
+  "WI": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_wi.csv",
+   "sha256": "4fff0919f7fd84c0ae6307fd5448989c92f0f24d8a0541ba0b4984f9812a25b2",
+   "bytes": 6917801,
+   "last_modified": "Mon, 07 Sep 2026 04:13:25 GMT",
+   "fetched": "2026-09-28T04:15:27+00:00"
+  },
+  "WV": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_wv.csv",
+   "sha256": "ee3c2e0a2d4e35f5cea1618ecee4cd7a0acc6e5c49c4ff1a06906271119ce309",
+   "bytes": 2074126,
+   "last_modified": "Mon, 07 Sep 2026 04:13:26 GMT",
+   "fetched": "2026-09-28T04:15:16+00:00"
+  },
+  "WY": {
+   "url": "https://www.irs.gov/pub/irs-soi/eo_wy.csv",
+   "sha256": "1254e1ade8602a56ccdf159865c2cbe8f21eff71bad869cb02afc50ed7578026",
+   "bytes": 1027067,
+   "last_modified": "Mon, 07 Sep 2026 04:13:26 GMT",
+   "fetched": "2026-09-28T04:15:28+00:00"
+  }
  }
 }

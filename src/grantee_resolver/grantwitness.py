@@ -52,9 +52,11 @@ def fetch(agency: str, dest_dir: Path, live: bool = False, tag: str = PINNED_REL
     }
     # Only rewrite the sidecar when the bytes or their source actually changed, so a
     # nightly re-fetch of unchanged data does not commit a new timestamp every day.
+    # A new URL for the same bytes (the archive repo was renamed) keeps its first_seen.
     prev = source(path)
     if {k: prev.get(k) for k in record} != record:
-        record["first_seen"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        same_bytes = prev.get("sha256") == record["sha256"] and "first_seen" in prev
+        record["first_seen"] = prev["first_seen"] if same_bytes else datetime.now(timezone.utc).isoformat(timespec="seconds")
         source_path(path).write_text(json.dumps(record, indent=1) + "\n")
     return path
 

@@ -52,7 +52,9 @@ python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 .venv/bin/grantee resolve cdc      # write data/resolved/cdc.csv
 ```
 
-`.github/workflows/nightly.yml` runs the same three steps daily and commits the result.
+`.github/workflows/nightly.yml` runs `grantee taggs` daily and commits any new snapshot.
+Resolving is run by hand. The IRS replaces its files in place, so a rerun can move a
+match, and a moved match should be reviewed before it is committed.
 
 ## Grant Witness input
 
@@ -60,16 +62,18 @@ The Grant Witness CSVs are fetched at run time, not committed. The Grant Witness
 archives them at
 [signaltrack/gw-grant-disruption-data](https://github.com/signaltrack/gw-grant-disruption-data)
 (formerly `gw-data`), which cuts a dated release per pull, and `grantee gw` reads from a
-release tag pinned in `grantwitness.py`. So a run is reproducible and the input is citable, and this repo does
-not carry a second copy of a 25 MB file someone else already archives.
+release tag pinned in `grantwitness.py`. So a run is reproducible and the input is
+citable, and this repo does not carry a second copy of a file someone else already
+archives.
 
 Every fetch writes `data/grantwitness/{agency}.source.json` with the URL, release tag,
-SHA-256 of the bytes, and when that content was first seen. Each resolve writes `data/resolved/{agency}.meta.json`
-carrying that record alongside the run's tier counts. Those sidecars are committed; the
-CSVs are not.
+SHA-256 of the bytes, and when that content was first seen. Each resolve writes
+`data/resolved/{agency}.meta.json` carrying that record, the SHA-256 and IRS posting date
+of every state file it matched against, and the run's tier counts. Those sidecars are
+committed; the upstream CSVs are not.
 
-Bump `PINNED_RELEASE` to take new upstream data. Until you do, nightly runs reproduce the
-same resolved output and commit nothing, so the data moves only when you move the pin.
+To take new upstream data, bump `PINNED_RELEASE` and rerun `grantee resolve`. The
+resolved output changes only when someone does that.
 Pass `--live` to pull from grantwitness.org instead, or `--tag` for a one-off release.
 
 ## Match tiers
