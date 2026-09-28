@@ -37,11 +37,17 @@ Grant Witness CSV ──▶ USAspending award API ──▶ UEI, business catego
                                                                         └──▶ data/resolved/{agency}.csv
 ```
 
+HHS updates the PDF about once a week, so most nightly diffs are empty. Snapshots keep
+the PDF's text as extracted. The diff ignores formatting-only differences (date padding,
+capitalization, line wrapping, mojibake) and counts those rows under `reformatted`
+instead of listing them as changes.
+
 ## Usage
 
 ```sh
 python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 .venv/bin/grantee taggs            # download, parse, snapshot, diff against the previous snapshot
+.venv/bin/grantee taggs --rediff   # recompute every committed diff from the committed snapshots
 .venv/bin/grantee gw cdc samhsa    # fetch Grant Witness tables
 .venv/bin/grantee resolve cdc      # write data/resolved/cdc.csv
 ```

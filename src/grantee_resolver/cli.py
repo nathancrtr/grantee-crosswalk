@@ -12,6 +12,8 @@ DATA = ROOT / "data"
 
 
 def cmd_taggs(args):
+    if args.rediff:
+        return rediff_taggs()
     pdf, sha = taggs.download(DATA / "cache" / "HHS_Grants_Terminated.pdf")
     rows = taggs.parse(pdf)
     snap_dir = DATA / "taggs" / "snapshots"
@@ -25,8 +27,20 @@ def cmd_taggs(args):
         d["against"] = prev[-1].name
         d["sha256"] = sha
         dpath = taggs.write_diff(d, DATA / "taggs" / "changes", today)
-        result.update(added=len(d["added"]), removed=len(d["removed"]), changed=len(d["changed"]), diff=str(dpath.relative_to(ROOT)))
+        result.update(added=len(d["added"]), removed=len(d["removed"]), changed=len(d["changed"]),
+                      reformatted=d["reformatted"], diff=str(dpath.relative_to(ROOT)))
     print(json.dumps(result, indent=1))
+
+
+def rediff_taggs():
+    """Recompute every committed diff from the committed snapshots, keeping each day's PDF hash."""
+    snap_dir, changes = DATA / "taggs" / "snapshots", DATA / "taggs" / "changes"
+    for p in sorted(changes.glob("*.json")):
+        old = json.loads(p.read_text())
+        d = taggs.diff(taggs.load_snapshot(snap_dir / old["against"]), taggs.load_snapshot(snap_dir / f"{p.stem}.csv"))
+        d["against"], d["sha256"] = old["against"], old["sha256"]
+        taggs.write_diff(d, changes, date.fromisoformat(p.stem))
+        print(p.stem, {k: len(v) if isinstance(v, list) else v for k, v in d.items() if k != "sha256"})
 
 
 def cmd_gw(args):
@@ -51,7 +65,9 @@ def _gw_source_args(p):
 def main():
     ap = argparse.ArgumentParser(prog="grantee")
     sub = ap.add_subparsers(required=True)
-    s = sub.add_parser("taggs", help="snapshot + diff the HHS terminated-grants PDF"); s.set_defaults(fn=cmd_taggs)
+    s = sub.add_parser("taggs", help="snapshot + diff the HHS terminated-grants PDF")
+    s.add_argument("--rediff", action="store_true", help="recompute committed diffs from committed snapshots; no download")
+    s.set_defaults(fn=cmd_taggs)
     s = sub.add_parser("gw", help="fetch Grant Witness tables from the pinned gw-data release")
     s.add_argument("agencies", nargs="*", default=["cdc"]); _gw_source_args(s); s.set_defaults(fn=cmd_gw)
     s = sub.add_parser("resolve", help="resolve a Grant Witness table to UEI/EIN")
