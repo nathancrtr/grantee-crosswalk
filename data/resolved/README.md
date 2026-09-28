@@ -3,7 +3,7 @@
 **cdc.csv** has one row per award in the Grant Witness CDC table, keyed on their Award ID,
 with the recipient's USAspending identifiers and, where one could be found, its IRS
 record. Hand-checked 2026-09-04. Last resolved against Grant Witness archive release
-`2026-08-26.6` and the IRS files posted 2026-09-07; `cdc.meta.json` has the URL and
+`2026-09-21` and the IRS files posted 2026-09-07; `cdc.meta.json` has the URL and
 SHA-256 of each. Licence CC0 (see `../LICENSE`).
 
 ## Columns
@@ -113,7 +113,7 @@ is right in general, and the tier tells a reader exactly which rows a human vouc
 
 ## Since the hand check
 
-The IRS replaced its files on 2026-09-07. Resolving against them changed 19 rows:
+**2026-09-07: new IRS files.** Resolving against them changed 19 rows:
 
 - **South Side Help Center (NU62PS924658), `MAYBE` to `YES`.** The new file lists SOUTH
   SIDE HELP CENTER INC, Chicago, EIN 36-3532259: exact name, same city. The 2026-09-04
@@ -122,6 +122,14 @@ The IRS replaced its files on 2026-09-07. Resolving against them changed 19 rows
 - 13 rows: `bmf_revenue` updated.
 - 5 rows: `bmf_city`, `bmf_zip5` and the geo score updated (4 of them revenue too); same
   EIN.
+
+**2026-09-28: Grant Witness release `2026-09-21`** (from `2026-08-26.6`). Same 580
+awards. 14 rows changed, all in the columns copied verbatim from Grant Witness. Two
+statuses moved from "Reinstated (unconfirmed)" to "Reinstated (confirmed)" (NU62PS924789,
+NE11OE000108). Two cities changed (NE11OE000011 Tallahassee to Miami, NU58DP007634
+Stockton to Sacramento), and the University of Chicago gained a leading "The". The other
+nine are capitalization only. No match changed. Matching uses USAspending's name and
+address wherever USAspending has the award (577 of 580), which covers all 14.
 
 ## Known limits
 

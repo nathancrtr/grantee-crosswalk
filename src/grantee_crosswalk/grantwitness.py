@@ -27,7 +27,7 @@ AGENCIES = ["nih", "cdc", "samhsa", "ahrq", "nsf", "epa"]
 
 # Pinned release of github.com/signaltrack/gw-grant-disruption-data. Bump deliberately;
 # the resolved outputs record which tag produced them.
-PINNED_RELEASE = "2026-08-26.6"
+PINNED_RELEASE = "2026-09-21"
 ARCHIVE = "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/{tag}/data/{agency}.csv"
 LIVE = "https://data.grant-witness.us/{agency}/dl-table.csv"
 

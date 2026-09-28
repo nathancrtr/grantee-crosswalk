@@ -12,11 +12,11 @@
  },
  "grant_witness_source": {
   "agency": "cdc",
-  "url": "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/2026-08-26.6/data/cdc.csv",
-  "release": "2026-08-26.6",
-  "sha256": "cba2566f16042d3822d3075ca69a63734de7338b49846980fffec3f19776b64d",
-  "bytes": 1488072,
-  "first_seen": "2026-09-03T23:32:19+00:00"
+  "url": "https://raw.githubusercontent.com/signaltrack/gw-grant-disruption-data/2026-09-21/data/cdc.csv",
+  "release": "2026-09-21",
+  "sha256": "bd24e0204de2291df09988b672f09c3efbf0db3fedcfc69378409ee066f51c86",
+  "bytes": 1493865,
+  "first_seen": "2026-09-28T15:33:43+00:00"
  },
  "irs_bmf_source": {
   "AK": {
