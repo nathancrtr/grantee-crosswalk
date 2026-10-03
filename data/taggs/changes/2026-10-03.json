@@ -1,0 +1,420 @@
+{
+ "added": [
+  {
+   "opdiv": "NIH",
+   "fain": "F31AI181429",
+   "obligation_doc": "FAI181429A",
+   "recipient": "YALE UNIV",
+   "state": "Connecticut",
+   "country": "UNITED STATES",
+   "action_date": "9/23/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Elucidating the molecular function of Kaposi's sarcoma-associated herpesvirus packaging accessory protein ORF68",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "30"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "F31AI191758",
+   "obligation_doc": "FAI191758A",
+   "recipient": "TULANE UNIVERSITY, SCHOOL OF MEDICINE",
+   "state": "Louisiana",
+   "country": "UNITED STATES",
+   "action_date": "9/23/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "MAC formation and Cell-Specific Inflammasome Activation in COVID-19",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "31"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "F31HG013262",
+   "obligation_doc": "FHG013262A",
+   "recipient": "SALK INSTITUTE FOR BIOLOGICAL STUDIES, SAN DIEGO, CALIFORNIA, THE",
+   "state": "California",
+   "country": "UNITED STATES",
+   "action_date": "9/24/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Predicting the effects of genetic variants on chromatin accessibility with a deep learning approach",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "39"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "K08AI180347",
+   "obligation_doc": "KAI180347A",
+   "recipient": "COLUMBIA UNIVERSITY, SCHOOL OF ARTS & SCIENCES",
+   "state": "New York",
+   "country": "UNITED STATES",
+   "action_date": "9/19/2026",
+   "obligated": "$193,644.00",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "$193,644.00",
+   "title": "Elucidating the impact of immune imprinting on SARS-CoV-2 variant vaccination strategies using a humanized mouse model",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "51"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "K08AI187716",
+   "obligation_doc": "KAI187716B",
+   "recipient": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+   "state": "California",
+   "country": "UNITED STATES",
+   "action_date": "9/19/2026",
+   "obligated": "$340,199.00",
+   "expended": "$222,654.00",
+   "paid": "$309,393.00",
+   "unliquidated": "$30,806.00",
+   "title": "Building an atlas of B cell mediated protective immunity to alphaviruses",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "51"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R01AI095983",
+   "obligation_doc": "RAI095983C",
+   "recipient": "ROCKEFELLER UNIVERSITY",
+   "state": "New York",
+   "country": "UNITED STATES",
+   "action_date": "9/19/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Genome-Wide Dissection of Mendelian Susceptibility to Mycobacterial Disease",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "57"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R01AI168163",
+   "obligation_doc": "RAI168163A",
+   "recipient": "HARVARD UNIVERSITY, SCHOOL OF PUBLIC HEALTH",
+   "state": "Massachusetts",
+   "country": "UNITED STATES",
+   "action_date": "4/21/2025",
+   "obligated": "$805,119.00",
+   "expended": "$98,218.00",
+   "paid": "$150,680.00",
+   "unliquidated": "$654,439.00",
+   "title": "Molecular basis of antimalarial drug resistance in Plasmodium vivax",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "58"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R01DK125641",
+   "obligation_doc": "RDK125641A",
+   "recipient": "DREXEL UNIVERSITY",
+   "state": "Pennsylvania",
+   "country": "UNITED STATES",
+   "action_date": "9/23/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Using Artificial Intelligence to Optimize Delivery of Weight Loss Treatment",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "64"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R01GM141088",
+   "obligation_doc": "RGM141088A",
+   "recipient": "UNIVERSITY OF TEXAS SOUTHWESTERN MEDICAL CTR DALLAS",
+   "state": "Texas",
+   "country": "UNITED STATES",
+   "action_date": "5/6/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Development of Sulfur-Based Reactions with Translational Applications",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "67"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R01MH125395",
+   "obligation_doc": "RMH125395A",
+   "recipient": "UNIVERSITY OF LOUISIANA AT LAFAYETTE",
+   "state": "Louisiana",
+   "country": "UNITED STATES",
+   "action_date": "9/18/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Identification of SIV replication and reservoirs in the CNS",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "72"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R35GM118027",
+   "obligation_doc": "RGM118027B",
+   "recipient": "UNIVERSITY OF WISCONSIN SYSTEM/BOARD OF REGENTS",
+   "state": "Wisconsin",
+   "country": "UNITED STATES",
+   "action_date": "5/13/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Cell migration and wound repair",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "82"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R36DA061013",
+   "obligation_doc": "RDA061013A",
+   "recipient": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+   "state": "California",
+   "country": "UNITED STATES",
+   "action_date": "9/23/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Determinants of transitioning from injecting to smoking fentanyl and methamphetamine and implications for harm reduction implementation",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "84"
+  }
+ ],
+ "removed": [
+  {
+   "opdiv": "CDC",
+   "fain": "H79SP021487",
+   "obligation_doc": "16SP21487A",
+   "recipient": "About Our Kids, Inc.",
+   "state": "Missouri",
+   "country": "UNITED STATES",
+   "action_date": "4/30/2026",
+   "obligated": "$125,000.00",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "$125,000.00",
+   "title": "See Something Say Something (S-4)",
+   "termination_type": "Termination for Cause",
+   "for_cause": "X",
+   "source_page": "3"
+  },
+  {
+   "opdiv": "CDC",
+   "fain": "NH28CE003446",
+   "obligation_doc": "22NH28CE003446",
+   "recipient": "OTIS R BOWEN CENTER FOR HUMAN SERVICES, INC",
+   "state": "Indiana",
+   "country": "UNITED STATES",
+   "action_date": "9/8/2026",
+   "obligated": "$470,730.21",
+   "expended": "$345,730.21",
+   "paid": "$345,730.21",
+   "unliquidated": "$125,000.00",
+   "title": "The goals of the Kosciusko Drug Free coalition are to establish and strengthen community collaboration in support of local efforts to prevent youth substance abuse.",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "9"
+  },
+  {
+   "opdiv": "CDC",
+   "fain": "NH28CE003456",
+   "obligation_doc": "22NH28CE003456",
+   "recipient": "MENTAL HEALTH ASSOCIATION IN VIGO COUNTY INC",
+   "state": "Indiana",
+   "country": "UNITED STATES",
+   "action_date": "5/1/2026",
+   "obligated": "$125,000.00",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "$125,000.00",
+   "title": "Partners for a Drug-Free Sullivan County",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "10"
+  },
+  {
+   "opdiv": "CDC",
+   "fain": "NU58DP007540",
+   "obligation_doc": "23NU58DP007540",
+   "recipient": "AMERICAN CANCER SOCIETY",
+   "state": "Georgia",
+   "country": "UNITED STATES",
+   "action_date": "1/6/2026",
+   "obligated": "$750,000.00",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "$750,000.00",
+   "title": "American Cancer Society Comprehensive Cancer ControlTechnical Assistance and Training Program",
+   "termination_type": "Termination for Convenience",
+   "for_cause": "-",
+   "source_page": "21"
+  },
+  {
+   "opdiv": "NIH",
+   "fain": "R01NS140765",
+   "obligation_doc": "RNS140765B",
+   "recipient": "WINIFRED MASTERSON BURKE MEDICAL RESCH INSTITUTE, INC",
+   "state": "New York",
+   "country": "UNITED STATES",
+   "action_date": "8/28/2026",
+   "obligated": "-",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "-",
+   "title": "Cross-talk between sarmoptosis and ferroptosis in hemorrhagic stroke",
+   "termination_type": "Bilateral Termination",
+   "for_cause": "-",
+   "source_page": "74"
+  }
+ ],
+ "changed": [
+  {
+   "key": "NIH|F31AI189116|FAI189116A",
+   "fields": [
+    "recipient",
+    "action_date"
+   ],
+   "before": {
+    "recipient": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "action_date": "4/2/2025"
+   },
+   "after": {
+    "recipient": "UNIVERSITY OF TEXAS HEALTH SCIENCE CTR AT SAN ANTONIO",
+    "action_date": "4/3/2025"
+   }
+  },
+  {
+   "key": "NIH|F31AR083286|FAR083286A",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$32,774.00",
+    "unliquidated": "$12,814.00"
+   },
+   "after": {
+    "paid": "$33,344.00",
+    "unliquidated": "$12,244.00"
+   }
+  },
+  {
+   "key": "NIH|F32HD121257|FHD121257A",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$17,988.00",
+    "unliquidated": "$61,312.00"
+   },
+   "after": {
+    "paid": "$18,483.00",
+    "unliquidated": "$60,817.00"
+   }
+  },
+  {
+   "key": "NIH|K22CA276360|KCA276360A",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$127,474.00",
+    "unliquidated": "$64,766.00"
+   },
+   "after": {
+    "paid": "$129,640.00",
+    "unliquidated": "$62,600.00"
+   }
+  },
+  {
+   "key": "NIH|R01AG072641|RAG072641A",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$1,824,974.00",
+    "unliquidated": "$449,170.00"
+   },
+   "after": {
+    "paid": "$1,824,279.00",
+    "unliquidated": "$449,865.00"
+   }
+  },
+  {
+   "key": "NIH|R01AG072756|RAG072756A",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$58,860.00",
+    "unliquidated": "$511,183.00"
+   },
+   "after": {
+    "paid": "$67,540.00",
+    "unliquidated": "$502,503.00"
+   }
+  },
+  {
+   "key": "NIH|R01GM132765|RGM132765B",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$171,783.00",
+    "unliquidated": "$148,062.00"
+   },
+   "after": {
+    "paid": "$172,759.00",
+    "unliquidated": "$147,086.00"
+   }
+  },
+  {
+   "key": "NIH|U19AI077439|UAI077439E",
+   "fields": [
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "paid": "$432,010.00",
+    "unliquidated": "$978,826.00"
+   },
+   "after": {
+    "paid": "$446,108.00",
+    "unliquidated": "$964,728.00"
+   }
+  }
+ ],
+ "reformatted": 0,
+ "against": "2026-10-02.csv",
+ "sha256": "e0300f7240141ccfa6ee9ed04acefb1e52ff115255886c480ab454ea3b9dc2ef"
+}
