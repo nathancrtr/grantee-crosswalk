@@ -1,0 +1,746 @@
+{
+ "added": [],
+ "removed": [
+  {
+   "opdiv": "HRSA",
+   "fain": "A2230942",
+   "obligation_doc": "23A22HP30942",
+   "recipient": "LOURDES COLLEGE",
+   "state": "Ohio",
+   "country": "UNITED STATES",
+   "action_date": "6/26/2026",
+   "obligated": "$15,040.00",
+   "expended": "$15,040.00",
+   "paid": "$15,040.00",
+   "unliquidated": "-",
+   "title": "Nurse Anesthetist Traineeships",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "CE153806",
+   "obligation_doc": "24CE1HS53806",
+   "recipient": "PRESTERA CTR FOR MENTAL HEALTH SERVICES INC",
+   "state": "West Virginia",
+   "country": "UNITED STATES",
+   "action_date": "6/26/2026",
+   "obligated": "$350,000.00",
+   "expended": "$350,000.00",
+   "paid": "$350,000.00",
+   "unliquidated": "-",
+   "title": "Community Project Funding/Congressionally Directed Spending - Construction",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "E0128792",
+   "obligation_doc": "22E01HP28792",
+   "recipient": "UNIVERSITY OF TEXAS AT ARLINGTON",
+   "state": "Texas",
+   "country": "UNITED STATES",
+   "action_date": "7/22/2026",
+   "obligated": "$432,027.00",
+   "expended": "$432,027.00",
+   "paid": "$432,027.00",
+   "unliquidated": "-",
+   "title": "Nurse Faculty Loan Program",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "H8000551",
+   "obligation_doc": "25H80CS00551",
+   "recipient": "ST. GABRIEL HEALTH CLINIC, INC",
+   "state": "Louisiana",
+   "country": "UNITED STATES",
+   "action_date": "12/15/2025",
+   "obligated": "$1,183,738.00",
+   "expended": "$329,918.65",
+   "paid": "$329,918.65",
+   "unliquidated": "$853,819.35",
+   "title": "Health Center Program",
+   "termination_type": "Termination for Cause",
+   "for_cause": "X",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "H8000687",
+   "obligation_doc": "24H80CS00687",
+   "recipient": "QUALITY COMMUNITY HEALTH CARE, INC",
+   "state": "Pennsylvania",
+   "country": "UNITED STATES",
+   "action_date": "6/29/2026",
+   "obligated": "$3,215,808.00",
+   "expended": "$2,113,288.00",
+   "paid": "$2,113,288.00",
+   "unliquidated": "$1,102,520.00",
+   "title": "Health Center Program",
+   "termination_type": "Termination for Cause",
+   "for_cause": "X",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "HB149862",
+   "obligation_doc": "23HB1RH49862",
+   "recipient": "Healthie Georgia Corporation",
+   "state": "Georgia",
+   "country": "UNITED STATES",
+   "action_date": "6/26/2026",
+   "obligated": "$1,000,000.00",
+   "expended": "$341,773.89",
+   "paid": "$341,773.89",
+   "unliquidated": "$658,226.11",
+   "title": "Rural Communities Opioid Response Program - Medication Assisted Treatment Access",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "T9155493",
+   "obligation_doc": "26T91HP55493",
+   "recipient": "MEDSTAR RESEARCH INSTITUTE, INC",
+   "state": "District of Columbia",
+   "country": "UNITED STATES",
+   "action_date": "7/22/2026",
+   "obligated": "$107,116.00",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "$107,116.00",
+   "title": "Teaching Health Center (THC) Graduate Medical Education (GME) Payment Program",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "23"
+  },
+  {
+   "opdiv": "HRSA",
+   "fain": "T9155496",
+   "obligation_doc": "26T91HP55496",
+   "recipient": "IBN SINA FOUNDATION, INC.",
+   "state": "Texas",
+   "country": "UNITED STATES",
+   "action_date": "7/22/2026",
+   "obligated": "$214,232.00",
+   "expended": "-",
+   "paid": "-",
+   "unliquidated": "$214,232.00",
+   "title": "Teaching Health Center (THC) Graduate Medical Education (GME) Payment Program",
+   "termination_type": "Termination for Mutual Convenience",
+   "for_cause": "-",
+   "source_page": "23"
+  }
+ ],
+ "changed": [
+  {
+   "key": "ACF|90CA1889|90CA188903",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$1,000,000.00",
+    "expended": "$115,231.12",
+    "paid": "$115,231.12",
+    "unliquidated": "$884,768.88"
+   },
+   "after": {
+    "obligated": "-",
+    "expended": "-",
+    "paid": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90CA1890|90CA189003",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$1,000,000.00",
+    "expended": "$178,999.08",
+    "paid": "$178,999.08",
+    "unliquidated": "$821,000.92"
+   },
+   "after": {
+    "obligated": "-",
+    "expended": "-",
+    "paid": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90CA1891|90CA189103",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$1,000,000.00",
+    "expended": "$169,847.38",
+    "paid": "$169,847.38",
+    "unliquidated": "$830,152.62"
+   },
+   "after": {
+    "obligated": "-",
+    "expended": "-",
+    "paid": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90CA1892|90CA189203",
+   "fields": [
+    "obligated",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$1,000,000.00",
+    "unliquidated": "$1,000,000.00"
+   },
+   "after": {
+    "obligated": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90CA1893|90CA189303",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$999,988.00",
+    "expended": "$212,867.70",
+    "paid": "$212,867.70",
+    "unliquidated": "$787,120.30"
+   },
+   "after": {
+    "obligated": "-",
+    "expended": "-",
+    "paid": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90CA1894|90CA189403",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$1,000,000.00",
+    "expended": "$96,640.00",
+    "paid": "$96,640.00",
+    "unliquidated": "$903,360.00"
+   },
+   "after": {
+    "obligated": "-",
+    "expended": "-",
+    "paid": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90CA1895|90CA189503",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "obligated": "$1,000,000.00",
+    "expended": "$163,661.22",
+    "paid": "$163,661.22",
+    "unliquidated": "$836,338.78"
+   },
+   "after": {
+    "obligated": "-",
+    "expended": "-",
+    "paid": "-",
+    "unliquidated": "-"
+   }
+  },
+  {
+   "key": "ACF|90ZU0465|90ZU046502",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$152,625,788.08",
+    "paid": "$152,625,788.08"
+   },
+   "after": {
+    "expended": "$152,625,788.10",
+    "paid": "$152,625,788.10"
+   }
+  },
+  {
+   "key": "ACF|90ZU0473|90ZU047302",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$108,392,001.25",
+    "paid": "$108,392,001.25"
+   },
+   "after": {
+    "expended": "$108,392,001.30",
+    "paid": "$108,392,001.30"
+   }
+  },
+  {
+   "key": "ACF|90ZU0478|90ZU047802",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$139,080,284.67",
+    "paid": "$139,080,284.67"
+   },
+   "after": {
+    "expended": "$139,080,284.70",
+    "paid": "$139,080,284.70"
+   }
+  },
+  {
+   "key": "CDC|NH23IP922578|20NH23IP922578C5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$132,591,162.63",
+    "paid": "$132,591,162.63"
+   },
+   "after": {
+    "expended": "$132,591,162.60",
+    "paid": "$132,591,162.60"
+   }
+  },
+  {
+   "key": "CDC|NH23IP922607|20NH23IP922607C5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$170,332,720.78",
+    "paid": "$170,332,720.78",
+    "unliquidated": "$101,174,711.22"
+   },
+   "after": {
+    "expended": "$170,332,720.80",
+    "paid": "$170,332,720.80",
+    "unliquidated": "$101,174,711.20"
+   }
+  },
+  {
+   "key": "CDC|NH23IP922630|20NH23IP922630C5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$122,599,998.78",
+    "paid": "$122,599,998.78"
+   },
+   "after": {
+    "expended": "$122,599,998.80",
+    "paid": "$122,599,998.80"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000501|19NU50CK000501C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$376,503,424.93",
+    "paid": "$376,503,424.93"
+   },
+   "after": {
+    "expended": "$376,503,424.90",
+    "paid": "$376,503,424.90"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000501|19NU50CK000501EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$657,776,885.96",
+    "paid": "$657,776,885.96",
+    "unliquidated": "$877,628,206.04"
+   },
+   "after": {
+    "expended": "$657,776,886.00",
+    "paid": "$657,776,886.00",
+    "unliquidated": "$877,628,206.00"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000503|19NU50CK000503C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$132,402,754.66",
+    "paid": "$132,402,754.66"
+   },
+   "after": {
+    "expended": "$132,402,754.70",
+    "paid": "$132,402,754.70"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000503|19NU50CK000503EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$125,128,539.16",
+    "paid": "$125,128,539.16",
+    "unliquidated": "$262,367,099.84"
+   },
+   "after": {
+    "expended": "$125,128,539.20",
+    "paid": "$125,128,539.20",
+    "unliquidated": "$262,367,099.80"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000504|19NU50CK000504EDE XC5",
+   "fields": [
+    "unliquidated"
+   ],
+   "before": {
+    "unliquidated": "$114,243,964.14"
+   },
+   "after": {
+    "unliquidated": "$114,243,964.10"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000526|19NU50CK000526EDE XC5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$176,338,674.41",
+    "paid": "$176,338,674.41"
+   },
+   "after": {
+    "expended": "$176,338,674.40",
+    "paid": "$176,338,674.40"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000528|19NU50CK000528EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$214,241,373.37",
+    "paid": "$214,241,373.37",
+    "unliquidated": "$178,834,838.63"
+   },
+   "after": {
+    "expended": "$214,241,373.40",
+    "paid": "$214,241,373.40",
+    "unliquidated": "$178,834,838.60"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000529|19NU50CK000529EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$320,529,124.47",
+    "paid": "$320,529,124.47",
+    "unliquidated": "$290,592,574.53"
+   },
+   "after": {
+    "expended": "$320,529,124.50",
+    "paid": "$320,529,124.50",
+    "unliquidated": "$290,592,574.50"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000532|19NU50CK000532C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$189,784,705.36",
+    "paid": "$189,784,705.36"
+   },
+   "after": {
+    "expended": "$189,784,705.40",
+    "paid": "$189,784,705.40"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000532|19NU50CK000532EDE XC5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$229,157,981.59",
+    "paid": "$229,157,981.59"
+   },
+   "after": {
+    "expended": "$229,157,981.60",
+    "paid": "$229,157,981.60"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000542|19NU50CK000542C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$107,913,936.89",
+    "paid": "$107,913,936.89"
+   },
+   "after": {
+    "expended": "$107,913,936.90",
+    "paid": "$107,913,936.90"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000542|19NU50CK000542EDE XC5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$244,769,219.94",
+    "paid": "$244,769,219.94"
+   },
+   "after": {
+    "expended": "$244,769,219.90",
+    "paid": "$244,769,219.90"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000543|19NU50CK000543C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$206,601,517.46",
+    "paid": "$206,601,517.46"
+   },
+   "after": {
+    "expended": "$206,601,517.50",
+    "paid": "$206,601,517.50"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000545|19NU50CK000545EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$125,227,991.29",
+    "paid": "$125,227,991.29",
+    "unliquidated": "$156,991,408.71"
+   },
+   "after": {
+    "expended": "$125,227,991.30",
+    "paid": "$125,227,991.30",
+    "unliquidated": "$156,991,408.70"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000546|19NU50CK000546EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$140,709,746.15",
+    "paid": "$140,709,746.15",
+    "unliquidated": "$212,550,684.85"
+   },
+   "after": {
+    "expended": "$140,709,746.20",
+    "paid": "$140,709,746.20",
+    "unliquidated": "$212,550,684.90"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000549|19NU50CK000549EDE XC5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$167,084,904.04",
+    "paid": "$167,084,904.04"
+   },
+   "after": {
+    "expended": "$167,084,904.00",
+    "paid": "$167,084,904.00"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000550|19NU50CK000550EDE XC5",
+   "fields": [
+    "unliquidated"
+   ],
+   "before": {
+    "unliquidated": "$117,848,188.87"
+   },
+   "after": {
+    "unliquidated": "$117,848,188.90"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000554|19NU50CK000554C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$410,879,915.78",
+    "paid": "$410,879,915.78"
+   },
+   "after": {
+    "expended": "$410,879,915.80",
+    "paid": "$410,879,915.80"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000554|19NU50CK000554EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$754,086,815.51",
+    "paid": "$754,086,815.51",
+    "unliquidated": "$482,136,996.49"
+   },
+   "after": {
+    "expended": "$754,086,815.50",
+    "paid": "$754,086,815.50",
+    "unliquidated": "$482,136,996.50"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000555|19NU50CK000555C4",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$167,286,798.54",
+    "paid": "$167,286,798.54"
+   },
+   "after": {
+    "expended": "$167,286,798.50",
+    "paid": "$167,286,798.50"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000555|19NU50CK000555EDE XC5",
+   "fields": [
+    "expended",
+    "paid",
+    "unliquidated"
+   ],
+   "before": {
+    "expended": "$346,163,540.63",
+    "paid": "$346,163,540.63",
+    "unliquidated": "$145,127,130.37"
+   },
+   "after": {
+    "expended": "$346,163,540.60",
+    "paid": "$346,163,540.60",
+    "unliquidated": "$145,127,130.40"
+   }
+  },
+  {
+   "key": "CDC|NU50CK000557|19NU50CK000557EDE XC5",
+   "fields": [
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "expended": "$101,206,333.34",
+    "paid": "$101,206,333.34"
+   },
+   "after": {
+    "expended": "$101,206,333.30",
+    "paid": "$101,206,333.30"
+   }
+  },
+  {
+   "key": "NIH|UM1AI068619|UAI068619C",
+   "fields": [
+    "obligated",
+    "expended",
+    "paid"
+   ],
+   "before": {
+    "obligated": "$183,155,862.62",
+    "expended": "$158,278,259.63",
+    "paid": "$158,278,259.63"
+   },
+   "after": {
+    "obligated": "$183,155,862.60",
+    "expended": "$158,278,259.60",
+    "paid": "$158,278,259.60"
+   }
+  }
+ ],
+ "reformatted": 0,
+ "against": "2026-10-09.csv",
+ "sha256": "d9d45bdd70e646566b5e717353f51c8e14671a4118207fabba0ada0f24d6fdb2"
+}
